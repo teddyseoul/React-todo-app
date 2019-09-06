@@ -4,6 +4,7 @@ import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 
 const App = () => {
+  // useState를 사용하여 todos라는 상태를 정의, 그 후 todos를 TodoList의 props로 전달
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -41,6 +42,8 @@ const App = () => {
     },
     [todos],
   );
+
+  // 글 추가 기능 구현
 
   // 고유값으로 사용될 id
   // ref를 사용하여 변수 담기
