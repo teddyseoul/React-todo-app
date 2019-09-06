@@ -3,11 +3,16 @@ import TodoListItem from './TodoListItem';
 import './TodoList.scss';
 
 // App.js에서 todos배열 값 받아옴
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, onRemove, onToggle }) => {
   return (
     <div className="TodoList">
       {todos.map(todo => (
-        <TodoListItem toto={todo} key={todo.id} />
+        <TodoListItem
+          todo={todo}
+          key={todo.id}
+          onRemove={onRemove}
+          onToggle={onToggle}
+        />
       ))}
     </div>
     // todos 배열을 map()을 통해 TodoListItem으로 이루어진 배열로 변환하여 렌더링
